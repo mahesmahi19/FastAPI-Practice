@@ -51,3 +51,10 @@ Set a secret key for signing tokens:
 $env:SECRET_KEY = "your-long-random-key"
 ```
 If it is not set, a development default is used. Do not use the default in production.
+
+## Tests
+```
+pip install pytest httpx
+pytest
+```
+Tests cover authentication (401 without token), registration, login and role-based access (403 for normal users on delete).
